@@ -31,8 +31,7 @@
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
-        <include>.gitignore</include>
-        <include>template.mvn.application.launch</include>
+        <include>*.*</include>
       </includes>
     </fileSet>
   </fileSets>

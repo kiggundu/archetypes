@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package com.kiggy;
+package ${package}.eclipse.application;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ShellAdapter;
