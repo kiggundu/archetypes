@@ -1,134 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-
-	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}</artifactId>
-	<version>${version}</version>
-	<packaging>jar</packaging>
-
-	<name>template-mvn-eclipse-plugin</name>
-	<url>http://maven.apache.org</url>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
-	<build>
-		<plugins>
-		<!-- 
-			<plugin>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<configuration>
-					<pde>true</pde>
-				</configuration>
-			</plugin>
- -->
-<!-- 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<Export-Package>org.foo.myproject.api</Export-Package>
-						<Private-Package>org.foo.myproject.*</Private-Package>
-						<Bundle-Activator>org.foo.myproject.impl1.Activator</Bundle-Activator>
-					</instructions>
-				</configuration>
-			</plugin>
--->
-<plugin>
-  <artifactId>maven-jar-plugin</artifactId>
-  <configuration>
-    <archive>  
-      <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-    </archive> 
-  </configuration>
-</plugin> 
-
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<version>1.2.1</version>
-				<extensions>true</extensions>
-				<executions>
-					<execution>
-						<id>bundle-manifest</id>
-						<phase>process-classes</phase>
-						<goals>
-							<goal>manifest</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<!-- 
-					<manifestLocation>${project.build.outputDirectory}/META-INF</manifestLocation>
-					-->
-					
-					<instructions>
-						<Bundle-ManifestVersion>2</Bundle-ManifestVersion>
-						<Bundle-SymbolicName>${project.name}</Bundle-SymbolicName>
-						<Bundle-SymbolicName>${project.artifactId};singleton:=true</Bundle-SymbolicName>
-						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-Activator>test_plugin_1.Activator</Bundle-Activator>
-						<Bundle-Vendor>Abraham on behalf of TheKiggys</Bundle-Vendor>
-						<Bundle-RequiredExecutionEnvironment>JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
-						<Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
-
-						<Require-Bundle>org.eclipse.ui,org.eclipse.core.runtime;bundle-version="3.6.0"</Require-Bundle>
-						<!-- 
-						<Export-Package>!${bundle.namespace}.internal.*,${bundle.namespace}.*;version="${pom.version}"</Export-Package>
-						<Private-Package>${bundle.namespace}.internal.*</Private-Package>
-						-->
-			            <!--
-			              embed compile/runtime dependencies using path that matches the copied dependency folder
-						<Embed-Dependency>*;scope=compile|runtime;inline=false</Embed-Dependency>
-						<Embed-Directory>target/dependency</Embed-Directory>
-						<Embed-StripGroup>true</Embed-StripGroup>
-			            -->
-
-					</instructions>
-				</configuration>
-			</plugin>
-
-
-		</plugins>
-	</build>
-
-
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.osgi</groupId>
-			<artifactId>org.eclipse.osgi</artifactId>
-			<version>3.6.0.v20100517</version>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.ui</groupId>
-			<artifactId>workbench</artifactId>
-			<version>3.3.0-I20070608-1100</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>swt</groupId>
-			<artifactId>swt-macosx</artifactId>
-			<version>3.0m7</version>
-			<scope>runtime</scope>
-		</dependency>
-	</dependencies>
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+    <packaging>jar</packaging>
+    
+    <name>template-mvn-eclipse-plugin</name>
+    <url>http://maven.apache.org</url>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <build>
+        <plugins>
+            <!--
+            <plugin>
+            <artifactId>maven-eclipse-plugin</artifactId>
+            <configuration>
+            <pde>true</pde>
+            </configuration>
+            </plugin>
+            -->
+            <!--
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <configuration>
+            <archive>
+            <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+            </archive>
+            </configuration>
+            </plugin>
+            <plugin>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>maven-bundle-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+            <instructions>
+            <Export-Package>org.foo.myproject.api</Export-Package>
+            <Private-Package>org.foo.myproject.*</Private-Package>
+            <Bundle-Activator>org.foo.myproject.impl1.Activator</Bundle-Activator>
+            </instructions>
+            </configuration>
+            </plugin>
+            -->
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                    </archive>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>1.2.1</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>bundle-manifest</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>manifest</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!--
+                    <manifestLocation>${project.build.outputDirectory}/META-INF</manifestLocation>
+                    -->
+                    
+                    <instructions>
+                        <Bundle-ManifestVersion>2</Bundle-ManifestVersion>
+                        <Bundle-SymbolicName>${project.name}</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>${project.artifactId};singleton:=true</Bundle-SymbolicName>
+                        <Bundle-Version>${project.version}</Bundle-Version>
+                        <Bundle-Activator>test_plugin_1.Activator</Bundle-Activator>
+                        <Bundle-Vendor>Abraham on behalf of TheKiggys</Bundle-Vendor>
+                        <Bundle-RequiredExecutionEnvironment>JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
+                        <Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
+                        
+                        <Require-Bundle>org.eclipse.ui,org.eclipse.core.runtime;bundle-version="3.6.0"</Require-Bundle>
+                        <!--
+                        <Export-Package>!${bundle.namespace}.internal.*,${bundle.namespace}.*;version="${pom.version}"</Export-Package>
+                        <Private-Package>${bundle.namespace}.internal.*</Private-Package>
+                        -->
+                        <!--
+                        embed compile/runtime dependencies using path that matches the copied dependency folder
+                        <Embed-Dependency>*;scope=compile|runtime;inline=false</Embed-Dependency>
+                        <Embed-Directory>target/dependency</Embed-Directory>
+                        <Embed-StripGroup>true</Embed-StripGroup>
+                        -->
+                        
+                    </instructions>
+                </configuration>
+            </plugin>
+            
+            
+        </plugins>
+    </build>
+    
+    
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.osgi</groupId>
+            <artifactId>org.eclipse.osgi</artifactId>
+            <version>3.6.0.v20100517</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.ui</groupId>
+            <artifactId>workbench</artifactId>
+            <version>3.3.0-I20070608-1100</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>swt</groupId>
+            <artifactId>swt-macosx</artifactId>
+            <version>3.0m7</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
 </project>

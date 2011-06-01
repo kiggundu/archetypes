@@ -9,25 +9,25 @@
          point="org.eclipse.ui.commands">
       <category
             name="Abe&apos;s Category"
-            id="test-plugin-1.commands.category">
+            id="${artefactId}.commands.category">
       </category>
       <command
             name="Abe&apos;s Command(template)mmand"
-            categoryId="test-plugin-1.commands.category"
-            id="test-plugin-1.commands.sampleCommand">
+            categoryId="${artefactId}.commands.category"
+            id="${artefactId}.commands.sampleCommand">
       </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            commandId="test-plugin-1.commands.sampleCommand"
+            commandId="${artefactId}.commands.sampleCommand"
             class="testplugin1.handlers.SampleHandler">
       </handler>
    </extension>
    <extension
          point="org.eclipse.ui.bindings">
       <key
-            commandId="test-plugin-1.commands.sampleCommand"
+            commandId="${artefactId}.commands.sampleCommand"
             contextId="org.eclipse.ui.contexts.window"
             sequence="M1+6"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
@@ -40,11 +40,11 @@
          <menu
                label="The Kiggys(template)"
                mnemonic="M"
-               id="test-plugin-1.menus.sampleMenu">
+               id="${artefactId}.menus.sampleMenu">
             <command
-                  commandId="test-plugin-1.commands.sampleCommand"
+                  commandId="${artefactId}.commands.sampleCommand"
                   icon="icons/blue-ball.gif"
-                  id="test-plugin-1.menus.sampleCommand"
+                  id="${artefactId}.menus.sampleCommand"
                   mnemonic="S">
             </command>
          </menu>
@@ -52,12 +52,12 @@
       <menuContribution
             locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
          <toolbar
-               id="test-plugin-1.toolbars.sampleToolbar">
+               id="${artefactId}.toolbars.sampleToolbar">
             <command
-                  commandId="test-plugin-1.commands.sampleCommand"
+                  commandId="${artefactId}.commands.sampleCommand"
                   icon="icons/blue-ball.gif"
                   tooltip="Say hello world"
-                  id="test-plugin-1.toolbars.sampleCommand">
+                  id="${artefactId}.toolbars.sampleCommand">
             </command>
          </toolbar>
       </menuContribution>
