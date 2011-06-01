@@ -7,7 +7,7 @@
     <version>${version}</version>
     <packaging>jar</packaging>
     
-    <name>template-mvn-eclipse-plugin</name>
+    <name>${archetypeId}</name>
     <url>http://maven.apache.org</url>
     
     <properties>
