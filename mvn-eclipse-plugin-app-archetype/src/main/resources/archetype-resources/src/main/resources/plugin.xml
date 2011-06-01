@@ -10,7 +10,7 @@
          point="org.eclipse.core.runtime.applications">
       <application>
          <run
-               class="com.kiggy.Application">
+               class="${package}.eclipse.application.Application">
          </run>
       </application>
    </extension>
@@ -30,7 +30,7 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             name="RCP Perspective"
-            class="com.kiggy.Perspective"
+            class="${package}.eclipse.perspective.Perspective"
             id="template-1.perspective">
       </perspective>
    </extension>

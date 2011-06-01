@@ -8,36 +8,17 @@
       <includes>
         <include>**/*.java</include>
       </includes>
-      <excludes>
-        <exclude>com/kiggy/Application.java</exclude>
-        <exclude>com/kiggy/ApplicationActionBarAdvisor.java</exclude>
-        <exclude>com/kiggy/ApplicationWorkbenchAdvisor.java</exclude>
-        <exclude>com/kiggy/ApplicationWorkbenchWindowAdvisor.java</exclude>
-        <exclude>com/kiggy/Perspective.java</exclude>
-        <exclude>template_plugin_app/Activator.java</exclude>
-      </excludes>
     </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>src/main/java</directory>
-      <includes>
-        <include>com/kiggy/Application.java</include>
-        <include>com/kiggy/ApplicationActionBarAdvisor.java</include>
-        <include>com/kiggy/ApplicationWorkbenchAdvisor.java</include>
-        <include>com/kiggy/ApplicationWorkbenchWindowAdvisor.java</include>
-        <include>com/kiggy/Perspective.java</include>
-        <include>template_plugin_app/Activator.java</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
+    <fileSet filtered="true" encoding="UTF-8" packaged="true">
       <directory>src/main/resources</directory>
       <includes>
         <include>**/*.xml</include>
+        <include>**/*.MF</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
       <directory>src/main/resources</directory>
       <includes>
-        <include>**/*.MF</include>
         <include>**/*.gif</include>
       </includes>
     </fileSet>
@@ -45,26 +26,6 @@
       <directory>src/test/java</directory>
       <includes>
         <include>**/*.java</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>META-INF</directory>
-      <includes>
-        <include>**/*.MF</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>.settings</directory>
-      <includes>
-        <include>**/*.prefs</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory></directory>
-      <includes>
-        <include>.classpath</include>
-        <include>.project</include>
-        <include>plugin.xml</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">

@@ -21,7 +21,7 @@
 <stringAttribute key="pde.version" value="3.3"/>
 <stringAttribute key="product" value="org.eclipse.epp.package.jee.product"/>
 <stringAttribute key="selected_target_plugins" value="org.eclipse.jface@default:default,org.eclipse.equinox.app@default:default,org.eclipse.swt@default:default,org.eclipse.swt.cocoa.macosx.x86_64@default:false,javax.servlet@default:default,org.eclipse.core.expressions@default:default,org.eclipse.core.runtime.compatibility.registry@default:false,org.eclipse.core.contenttype@default:default,org.eclipse.core.jobs@default:default,org.eclipse.osgi@-1:true,org.eclipse.core.commands@default:default,org.eclipse.core.runtime@default:true,javax.transaction,org.eclipse.equinox.common@2:true,org.eclipse.core.databinding.property@default:default,com.ibm.icu@default:default,org.eclipse.equinox.registry@default:default,org.eclipse.core.databinding.observable@default:default,org.eclipse.ui.cocoa@default:false,org.eclipse.core.databinding@default:default,org.eclipse.jface.databinding@default:default,org.eclipse.osgi.services@default:default,org.eclipse.ui.workbench@default:default,org.eclipse.core.runtime.compatibility.auth@default:default,org.eclipse.ui@default:default,org.eclipse.equinox.preferences@default:default,org.eclipse.help@default:default"/>
-<stringAttribute key="selected_workspace_plugins" value="template-mvn-eclipse-plugin-ECLIPSE-ONLY@default:default,template-mvn-eclipse-app-plugin-ECLIPSE-ONLY"/>
+<stringAttribute key="selected_workspace_plugins" value="${artifactId}"/>
 <booleanAttribute key="show_selected_only" value="false"/>
 <booleanAttribute key="tracing" value="false"/>
 <booleanAttribute key="useCustomFeatures" value="false"/>
