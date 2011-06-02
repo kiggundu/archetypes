@@ -6,7 +6,7 @@
 <plugin>
 
    <extension
-         id="template.mvn.application"
+         id="${artifactId}.application"
          point="org.eclipse.core.runtime.applications">
       <application>
          <run

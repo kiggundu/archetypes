@@ -7,7 +7,7 @@
     <version>${version}</version>
     <packaging>jar</packaging>
     
-    <name>${archetypeId}</name>
+    <name>${artifactId}</name>
     <url>http://maven.apache.org</url>
     
     <properties>
@@ -15,6 +15,18 @@
     </properties>
     
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>.</directory>
+                <includes>
+                    <include>plugin.xml</include>
+                    <include>META-INF/MANIFEST.MF</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <!--
             <plugin>
@@ -71,21 +83,18 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!--
-                    <manifestLocation>${project.build.outputDirectory}/META-INF</manifestLocation>
-                    -->
-                    
+					<manifestLocation>META-INF</manifestLocation>                    
                     <instructions>
                         <Bundle-ManifestVersion>2</Bundle-ManifestVersion>
                         <Bundle-SymbolicName>${project.name}</Bundle-SymbolicName>
                         <Bundle-SymbolicName>${project.artifactId};singleton:=true</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
-                        <Bundle-Activator>test_plugin_1.Activator</Bundle-Activator>
+                        <Bundle-Activator>${package}.eclipse.activation.Activator</Bundle-Activator>
                         <Bundle-Vendor>Abraham on behalf of TheKiggys</Bundle-Vendor>
                         <Bundle-RequiredExecutionEnvironment>JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
                         <Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
                         
-                        <Require-Bundle>org.eclipse.ui,org.eclipse.core.runtime;bundle-version="3.6.0",org.eclipse.equinox.app</Require-Bundle>
+                        <Require-Bundle>org.eclipse.ui.workbench,org.eclipse.core.runtime;bundle-version="3.6.0",org.eclipse.equinox.app</Require-Bundle>
                         <!--
                         <Export-Package>!${bundle.namespace}.internal.*,${bundle.namespace}.*;version="${pom.version}"</Export-Package>
                         <Private-Package>${bundle.namespace}.internal.*</Private-Package>
@@ -100,6 +109,20 @@
                     </instructions>
                 </configuration>
             </plugin>
+			<!--
+			      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+	  -->
             
             
         </plugins>

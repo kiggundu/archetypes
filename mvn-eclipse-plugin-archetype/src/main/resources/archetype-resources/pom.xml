@@ -7,7 +7,7 @@
     <version>${version}</version>
     <packaging>jar</packaging>
     
-    <name>${archetypeId}</name>
+    <name>${artifactId}</name>
     <url>http://maven.apache.org</url>
     
     <properties>
@@ -80,7 +80,7 @@
                         <Bundle-SymbolicName>${project.name}</Bundle-SymbolicName>
                         <Bundle-SymbolicName>${project.artifactId};singleton:=true</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
-                        <Bundle-Activator>test_plugin_1.Activator</Bundle-Activator>
+                        <Bundle-Activator>${package}.activator.Activator</Bundle-Activator>
                         <Bundle-Vendor>Abraham on behalf of TheKiggys</Bundle-Vendor>
                         <Bundle-RequiredExecutionEnvironment>JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
                         <Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>

@@ -10,16 +10,10 @@
       </includes>
     </fileSet>
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>src/main/resources</directory>
+      <directory></directory>
       <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>src/main/resources</directory>
-      <includes>
-        <include>**/*.MF</include>
-        <include>**/*.gif</include>
+        <include>plugin.xml</include>
+        <include>META-INF/MANIFEST.MF</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -31,8 +25,12 @@
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
-        <include>.gitignore</include>
+        <include>*.*</include>
       </includes>
+      <excludes>
+        <exclude>plugin.xml</exclude>
+        <exclude>META-INF/MANIFEST.MF</exclude>
+      </excludes>
     </fileSet>
   </fileSets>
 </archetype-descriptor>
