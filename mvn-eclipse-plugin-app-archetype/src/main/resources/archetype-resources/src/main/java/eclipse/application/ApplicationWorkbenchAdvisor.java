@@ -9,7 +9,7 @@ import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
 public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
-	private static final String PERSPECTIVE_ID = "template-1.perspective"; //${symbol_dollar}NON-NLS-1${symbol_dollar}
+	private static final String PERSPECTIVE_ID = "${artifactId}.perspective"; //${symbol_dollar}NON-NLS-1${symbol_dollar}
 
     public WorkbenchWindowAdvisor createWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
         return new ApplicationWorkbenchWindowAdvisor(configurer);
