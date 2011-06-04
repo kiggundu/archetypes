@@ -1,4 +1,4 @@
-h1. A collection of archtypes for Maven RCP projects
+h1. A collection of archetypes for Maven RCP projects
 
-p. Symlinks are used to ensure the META-INF and plugin.xml content is available to eclipse and within the mvn build structure so the archetypes are not suitable for windows. Feel free to contribute
+p.  Feel free to contribute
 
