@@ -15,7 +15,7 @@
       </application>
    </extension>
    <extension
-         id="template_product_new"
+         id="${artifactId}.product"
          point="org.eclipse.core.runtime.products">
       <product
             application="template.mvn.application"
@@ -31,7 +31,7 @@
       <perspective
             name="RCP Perspective"
             class="${package}.eclipse.perspective.Perspective"
-            id="template-1.perspective">
+            id="${artifactId}.perspective">
       </perspective>
    </extension>
 
