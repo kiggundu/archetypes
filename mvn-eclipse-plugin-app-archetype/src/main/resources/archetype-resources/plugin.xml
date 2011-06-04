@@ -18,7 +18,7 @@
          id="${artifactId}.product"
          point="org.eclipse.core.runtime.products">
       <product
-            application="template.mvn.application"
+            application="${artifactId}.application"
             name="Abe&apos;s test product">
          <property
                name="appName"
